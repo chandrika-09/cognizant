@@ -1,0 +1,445 @@
+1.hello world
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+
+2.simple calculator
+
+import java.util.Scanner;
+
+public class SimpleCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+
+        
+        System.out.println("\nChoose an operation:");
+        System.out.println("1. Addition (+)");
+        System.out.println("2. Subtraction (-)");
+        System.out.println("3. Multiplication (*)");
+        System.out.println("4. Division (/)");
+
+        System.out.print("Enter operation (1/2/3/4): ");
+        int choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.println("Result: " + (num1 + num2));
+                break;
+            case 2:
+                System.out.println("Result: " + (num1 - num2));
+                break;
+            case 3:
+                System.out.println("Result: " + (num1 * num2));
+                break;
+            case 4:
+                if (num2 == 0) {
+                    System.out.println("Error");
+                } else {
+                    System.out.println("Result: " + (num1 / num2));
+                }
+                break;
+            default:
+                System.out.println("Invalid choice.");
+        }
+    }
+}
+
+
+3.even or odd
+
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Enter the number: ");
+        double num = scanner.nextDouble();
+        if(num%2==0){
+        System.out.print("num is even");
+        }
+        else{
+        System.out.print("num is odd");
+        }
+    }
+}
+
+9.grade calculator
+
+import java.util.Scanner;
+public class GradeCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your marks: ");
+        int marks = scanner.nextInt();
+        if (marks < 0 || marks > 100) {
+            System.out.println("Invalid");
+        } else {
+            char grade;
+            if (marks >= 90) {
+                grade = 'A';
+            } else if (marks >= 80) {
+                grade = 'B';
+            } else if (marks >= 70) {
+                grade = 'C';
+            } else if (marks >= 60) {
+                grade = 'D';
+            } else {
+                grade = 'F';
+            }
+            System.out.println("Your grade is: " + grade);
+        }
+
+    }
+}
+
+
+4.leapyr
+
+import java.util.Scanner;
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a year: ");
+        int year = scanner.nextInt();
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    System.out.println(year + " is a leap year.");
+                } else {
+                    System.out.println(year + " is not a leap year.");
+                }
+            } else {
+                System.out.println(year + " is a leap year.");
+            }
+        } else {
+            System.out.println(year + " is not a leap year.");
+}
+    }
+}
+
+
+5.multiplication table
+
+import java.util.Scanner;
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter a number :");
+        int num = scanner.nextInt();
+        for (int i = 1; i <= 10; i++) {
+            int r = num * i;
+            System.out.println(num + " x " + i + " = " + r);
+        }
+    }
+}
+
+6.datatype
+
+public class Data {
+    public static void main(String[] args) {
+        int myInt = 25;
+        float myFloat = 12.5f;
+        double myDouble = 123.456;
+        char myChar = 'A';
+        boolean myBoolean = true;
+        System.out.println("Integer value: "+myInt);
+        System.out.println("Float value: " + myFloat);
+        System.out.println("Double value: " + myDouble);
+        System.out.println("Character value: " + myChar);
+        System.out.println("Boolean value: " + myBoolean);
+    }
+}
+
+15.reversing string
+
+import java.util.Scanner;
+public class StringReverse {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string : ");
+        String input = scanner.nextLine();
+        StringBuilder reversed = new StringBuilder(input);
+        reversed.reverse();
+        System.out.println("Reversed string: " + reversed.toString());
+    }
+}
+
+                     OR 
+
+import java.util.Scanner;
+public class reverse{
+    public static void main(String[] args){
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("enter a string:");
+        String input=scanner.nextLine();
+        String reversed="";
+        for (int i = input.length() - 1; i >= 0; i--) {
+    reversed += input.charAt(i);
+}
+System.out.println("Reversed string: " + reversed);;
+        
+    }
+}
+16.sum n avg
+
+import java.util.Scanner;
+
+public class ArraySumAverage {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of elements: ");
+        int n = scanner.nextInt();
+        int[] num = new int[n];
+        int sum = 0;
+        System.out.println("Enter");
+        for (int i = 0; i < n; i++) {
+            num[i] = scanner.nextInt();
+            sum += num[i];
+        }
+        int average = sum / n;
+        System.out.println("Sum of the elements: " + sum);
+        System.out.println("Average of the elements: " + average);
+    }
+}
+
+
+7.typecasting
+
+public class TypeCastingExample {
+    public static void main(String[] args) {
+        double num = 9.78;
+        int myInt = (int) num;
+        System.out.println("Original val: " + num);
+        System.out.println("After casting : " + myInt);
+        int num1 = 42;
+        double mydouble = num1;
+        System.out.println("Original val: " + num1);
+        System.out.println("After casting : " + mydouble);
+    }
+}
+
+12.method overloading
+
+public class MethodOverloadingExample {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+    public static double add(double a, double b) {
+        return a + b;
+    }
+    public static int add(int a, int b, int c) {
+        return a + b + c;
+    }
+    public static void main(String[] args) {
+        int sum1 = add(15, 20);              
+        double sum2 = add(3.3, 4.4);          
+        int sum3 = add(21, 22, 30);              
+        System.out.println("Sum of two integers: " + sum1);
+        System.out.println("Sum of two doubles: " + sum2);
+        System.out.println("Sum of three integers: " + sum3);
+    }
+}
+
+11.factorial
+
+import java.util.Scanner;
+public class Fact{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a n: ");
+        int n = scanner.nextInt();
+        if (n < 0) {
+            System.out.println("invalid input ");
+        } else {
+            int fact = 1;
+            for (int i = 1; i <= n; i++) {
+                fact*= i;
+            }
+            System.out.println("Factorial is: " + fact);
+        }
+    }
+}
+
+13.recursive Fibonacci
+
+import java.util.Scanner;
+public class RecursiveFibonacci {
+    public static int fibonacci(int n) {
+        if (n <= 0) {
+            return 0; 
+        } else if (n == 1) {
+            return 1; 
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2); 
+        }
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter n val: ");
+        int n = scanner.nextInt();
+        if (n < 0) {
+            System.out.println("invalid input");
+        } else {
+            int result = fibonacci(n);
+            System.out.println("Fibonacci number is: " + result);
+        }
+    }
+}
+17.class and object creation
+
+class Car {
+    String make;
+    String model;
+    int year;
+    void displayDetails() {
+        System.out.println("Car Details:");
+        System.out.println("Make: " + make);
+        System.out.println("Model: " + model);
+        System.out.println("Year: " + year);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Car car1 = new Car();
+        car1.make = "Toyota";
+        car1.model = "Corolla";
+        car1.year = 2020;
+        Car car2 = new Car();
+        car2.make = "Honda";
+        car2.model = "Civic";
+        car2.year = 2022;
+        car1.displayDetails();
+        car2.displayDetails();
+    }
+}
+
+
+18) inheritance example
+class Animal
+{
+    public void makeSound()
+    {
+        System.out.println("Animal makes sound");
+    }
+}
+class Dog extends Animal
+{
+    public void makeSound()
+    {
+        System.out.println("Bark");
+    }
+}
+public class Inheritance
+{
+    public static void main(String[] args)
+    {
+        Animal an=new Animal();
+        an.makeSound();
+        Dog dg=new Dog();
+        dg.makeSound();
+    }
+}
+
+19) interface implementation
+
+interface Playable
+{
+    void play();
+}
+class Guitar implements Playable
+{
+    public void play()
+    {
+        System.out.println("Guitar sounds good");
+    }
+}
+class Piano implements Playable
+{
+    public void play()
+    {
+        System.out.println("Piano sounds beautiful");
+    }
+}
+class Main
+{
+  public static void main(String[] args)
+  {
+      Guitar g=new Guitar();
+      g.play();
+      Piano p=new Piano();
+      p.play();
+  }
+}
+
+20) Try-catch example
+
+public class ArithmeticExceptionExample {
+    public static void main(String[] args) {
+        int result=10/0;
+        try {
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.err.println("Error: Division by zero is not allowed.");
+        } finally {
+            System.out.println("This block always executes");
+        }
+    }
+}
+
+21) custom Exception
+
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+public class Main {
+    static void validateAge(int age) throws InvalidAgeException {
+        if (age <18) {
+            throw new InvalidAgeException("Age is not valid: " + age);
+        } else {
+            System.out.println("Age is valid: " + age);
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            validateAge(12);
+        } catch (InvalidAgeException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        }
+    }
+}
+
+22) file writing
+
+import java.util.Scanner;
+public class OperatorPrecedenceDemo {
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b=scanner.nextInt();
+        int c=scanner.nextInt();
+        int result1 = a + b * c; 
+        System.out.println("Result 1 is : " + result1);
+        int result2 = (a + b) * c;  
+        System.out.println("Result 2 is: " + result2);
+        int result3 = a - b / c;
+        System.out.println("Result 3 is:  " + result3);
+        int result4 = a + b - c * a / b;  
+        System.out.println("Result 4 is : " + result4);
+    }
+}
